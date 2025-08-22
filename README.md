@@ -3,6 +3,7 @@
   I-Work Layoff Project 
   
   II- Restaurant Order Analysis Project 
+
 ## Work Layoff Project 
 ### Project Overview 
 
@@ -16,6 +17,7 @@ Dataset Used "layoffs.csv" from Github it was public and used for the sake of pr
 
 ### Tools 
 -MySQL 
+
 -MySQL Workbench 
 
 ### Data Cleaning /Preparation 
@@ -38,6 +40,7 @@ Steps taken :
   - Dropped helper columns (like row_num used for deduplication).
   - Produced a final clean dataset ready for analysis and visualization.
 
+## Restaurant Order Analysis Project
 ### Project Overview 
 
 This project focuses on cleaning, preparing, and analyzing a real-world restaurant order dataset using SQL.
@@ -52,6 +55,7 @@ Dataset:
 
 ### Tools 
 -MySQL
+
 -MySQL Workbench
 
 ### Data Cleaning /Preparation 
