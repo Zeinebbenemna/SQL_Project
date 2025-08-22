@@ -1,4 +1,7 @@
 # SQL_Project
+## Projects Summary
+  I-Work Layoff Project 
+  II- Restaurant Order Analysis Project 
 ## Work Layoff Project 
 ### Project Overview 
 
@@ -33,3 +36,55 @@ Steps taken :
 5. Final Cleanup
   - Dropped helper columns (like row_num used for deduplication).
   - Produced a final clean dataset ready for analysis and visualization.
+
+### Project Overview 
+
+This project focuses on cleaning, preparing, and analyzing a real-world restaurant order dataset using SQL.
+The raw dataset included tables for menu items and customer orders, which contained issues such as missing dates, incorrectly formatted data, and inconsistencies in column names.
+The goal was to transform this raw data into a clean, reliable, and analysis-ready dataset in order to explore customer behavior, menu trends, and the most profitable orders.
+
+### Data Sources
+Dataset:
+-menu_items.csv — contains details of restaurant menu items (item names, categories, prices).
+-order_details.csv — contains customer order data (order IDs, item IDs, order dates/times).
+!-The datasets were used for practice and realistic scenario analysis.(Public dataset)
+
+### Tools 
+-MySQL
+-MySQL Workbench
+
+### Data Cleaning /Preparation 
+
+#### Steps taken:
+#### Database Setup & Table Creation
+-Created a dedicated database Restaurant_Order_Analysis.
+-Created menu_items and order_details tables to hold raw CSV data.
+-Enabled local_infile and imported CSV files using LOAD DATA for faster loading.
+
+#### Handling Invalid & Missing Data
+-Detected invalid dates (0000-00-00) in order_date and replaced them with NULL.
+-Temporarily adjusted SQL modes (STRICT_TRANS_TABLES, NO_ZERO_DATE) to allow cleaning.
+
+#### Column & Table Standardization
+-Corrected incorrectly imported column names (e.g., ï»¿menu_item_id → menu_item_id).
+-Ensured consistent data types for dates, times, and numeric columns.
+
+#### Data Integration
+-Created a join_table by combining menu_items and order_details to facilitate analysis.
+
+#### Exploratory Analysis / Aggregations
+-Counted orders per item and category to find popular menu items.
+-Calculated total spending per order and identified the top 5 highest spending orders.
+-Analyzed item distribution per category within individual orders.
+-Generated summary statistics for menu items (total items, average price, most/least expensive).
+
+#### Final Dataset for Analysis
+-The resulting join_table is clean, standardized, and ready for advanced queries, trend analysis, and business insights.
+
+#### Key Insights
+-Top-Selling Items: Certain dishes were ordered far more frequently, revealing customer favorites.
+-Popular Categories: Categories like Italian and Desserts had the highest order counts.
+-High-Value Orders: Top 5 orders generated the most revenue, highlighting profitable item combinations.
+-Price Insights: Average and range of menu prices per category help guide pricing strategies.
+-Order Patterns: Frequently ordered items together can inform combos or promotions.
+
